@@ -13,7 +13,14 @@
     
     <!--{{> date_display}}-->
     <div class="container top-margin">
-        {{> editor}}
+        <div class="row">
+            <div class="col-md-6">
+                {{> editor}}
+            </div>
+             <div class="col-md-6">
+                 {{> viewer}}
+            </div>
+        </div>
     </div>
     
 </body>
@@ -22,5 +29,11 @@
     {{current_date}}
 </template>
 <template name="editor">
-  {{>sharejsCM docid=docid id="editor"}}
+  {{>sharejsCM docid=docid onRender=config id="editor"}}
+</template>
+
+<template name="viewer">
+  <iframe id="viewer_iframe">
+    
+    </iframe>
 </template>
