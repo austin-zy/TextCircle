@@ -3,10 +3,19 @@
 </head>
 
 <body>
-  <h1>Welcome to TextCircle!</h1>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+       
+        <div class="container">
+            <a class="navbar-brand" href="#">TextCircle</a>
+        </div>
+    </nav>
+  
     
-    {{> date_display}}
-    {{> editor}}
+    <!--{{> date_display}}-->
+    <div class="container top-margin">
+        {{> editor}}
+    </div>
+    
 </body>
 
 <template name="date_display">
