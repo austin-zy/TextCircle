@@ -1,4 +1,5 @@
 this.Documents = new Mongo.Collection("documents");
+EditingUsers = new Mongo.Collection("editingUsers");
 
 
 if (Meteor.isClient) {
@@ -12,7 +13,13 @@ if (Meteor.isClient) {
       current_date: function(){
           return Session.get("current_date")
       }
-  });   
+  });  
+    
+ Template._loginButtonsLoggedInDropdown.events({
+    'click #login-buttons-edit-profile': function(event) {
+        Router.go('profileEdit');
+    }
+});   
   
     
   Template.editor.helpers({
